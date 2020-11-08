@@ -15,7 +15,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     ip = []
-    with open("/opt/hostname.txt", "r") as rf:
+    with open("hostname.txt", "r") as rf:
         df = csv.reader(rf)
         for i in df:
             ip.append(i)
