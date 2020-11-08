@@ -1,3 +1,6 @@
+# Update the OS dependent packages
+sudo yum update -y
+
 # PIP installtion
 curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
 python get-pip.py
