@@ -5,4 +5,6 @@ sudo chmod +x requirements.sh
 sudo sh requirements.sh
 
 # Run the application
-sudo nohup python app.py >> logs.txt 2>&1 &
+#sudo nohup python app.py >> logs.txt 2>&1 &
+
+sudo nohup python app.py >> logs.txt &
