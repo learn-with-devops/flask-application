@@ -13,6 +13,12 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
+    ip = []
+    with open("hostname.txt", "r") as rf:
+        df = csv.reader(rf)
+        for i in df:
+            ip.append(i)
+
     if request.method == 'POST':
         name = request.form['name']
         email = request.form['email']
