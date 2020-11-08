@@ -1,5 +1,6 @@
 from flask import Flask, escape, request, render_template
 import mysql.connector
+import csv
 
 mydb = mysql.connector.connect(
     host='10.80.1.5',
@@ -14,7 +15,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET', 'POST'])
 def index():
     ip = []
-    with open("hostname.txt", "r") as rf:
+    with open("/opt/hostname.txt", "r") as rf:
         df = csv.reader(rf)
         for i in df:
             ip.append(i)
