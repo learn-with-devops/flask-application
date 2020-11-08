@@ -30,7 +30,7 @@ def index():
         mydb.commit()
         data.close()
         return "Data Inserted Successfully"
-    return render_template('index.html')
+    return render_template('index.html', ip=ip)
 
 
 if __name__ == '__main__':
