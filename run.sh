@@ -5,7 +5,7 @@ sudo chmod +x requirements.sh
 sudo sh requirements.sh
 
 # get the hostname
-hostname > hostname.txt
+sudo hostname > hostname.txt
 
 # Run the application
 #sudo nohup python app.py >> logs.txt 2>&1 &
